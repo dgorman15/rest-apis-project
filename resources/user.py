@@ -1,3 +1,6 @@
+print("USER RESOURCE FILE LOADED")
+
+
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
 from passlib.hash import pbkdf2_sha256
@@ -16,8 +19,6 @@ class UserRegister(MethodView):
     @blp.arguments(UserSchema)
     def post(self, user_data):
 
-        print("REGISTER ENDPOINT HIT")
-        
         if UserModel.query.filter(UserModel.username == user_data["username"]).first():
             abort(409, message="A user with that username already exists.")
 
