@@ -15,6 +15,9 @@ blp = Blueprint("Users", "users", description="Operations on users")
 class UserRegister(MethodView):
     @blp.arguments(UserSchema)
     def post(self, user_data):
+
+        print("REGISTER ENDPOINT HIT")
+        
         if UserModel.query.filter(UserModel.username == user_data["username"]).first():
             abort(409, message="A user with that username already exists.")
 
