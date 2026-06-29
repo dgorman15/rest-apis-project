@@ -39,7 +39,7 @@ def create_app(db_url=None):
     migrate = Migrate(app, db)
 
 
-    app.config["JWT_SECRET_KEY"] = "jose"
+    app.config["JWT_SECRET_KEY"] = "my-rest-api-secret-key"
     jwt = JWTManager(app)
 
     @jwt.token_in_blocklist_loader
