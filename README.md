@@ -1,6 +1,9 @@
 # REST API Store Project
 
-A RESTful API built with Flask for managing stores, items, tags, and users with JWT authentication.
+A Flask-based REST API that allows users to manage stores, items, and tags with full JWT authentication (access + refresh tokens).
+The project demonstrates relational database design, secure authentication, and RESTful API structure using Flask-Smorest.
+
+This project was built as a backend learning exercise focusing on API design, authentication flow, and database relationships.
 
 This project allows users to:
 - Register and log in
@@ -20,6 +23,14 @@ This project allows users to:
 - SQLAlchemy
 - SQLite / PostgreSQL (configurable)
 - Flask-Migrate
+
+---
+
+## API Documentation
+
+Swagger UI (Live):
+
+https://rest-apis-flask-python-project-msur.onrender.com/swagger-ui
 
 ---
 
